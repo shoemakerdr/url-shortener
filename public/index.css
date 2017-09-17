@@ -1,0 +1,58 @@
+body {
+    margin-left: 5em;
+    margin-right: 5em;
+    color: #333;
+}
+
+code {
+    margin-bottom: 1em;
+    padding: .5em;
+    background-color: #4F4F4F;
+    color: #3AFCCB;
+    display: block;
+    overflow-wrap: break-word;
+}
+
+.button {
+    background-color: white;
+    border: .15em solid black;
+    border-radius: 0;
+    padding: .5em 1em;
+    font-size: .8em;
+    transition: color .5s, background-color .5s;
+}
+
+.button:hover {
+    background-color: #42ADF4;
+    color: white;
+}
+
+footer {
+    padding-bottom: 1em;
+    padding-top: 2em;
+    width: 100%;
+}
+
+@media screen and (min-width: 600px) and (min-height: 500px) {
+    footer {
+        position: absolute;
+        right: 0;
+        bottom: 0;
+    }
+}
+
+.footer-text {
+    text-align: center;
+}
+
+a {
+    text-decoration: none;
+    transition: color .75s;
+}
+
+a:visited {
+    color: #42ADF4;
+}
+
+a:hover {
+    color: #3AFCCB;
