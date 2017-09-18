@@ -8,7 +8,7 @@ const isValidURL = url => {
 
 const shortener = (resource, response) => {
     const responses = {
-        error: () => response.json({error: 'URL Invalid'}),
+        error: () => response.json({error: 'Invalid input'}),
         json: doc => response.json(doc),
         redirectTo: url => response.redirect(url)
     }
