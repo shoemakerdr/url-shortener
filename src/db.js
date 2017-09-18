@@ -35,14 +35,14 @@ const findOrInsertURL = (url, res) => {
                         console.log(urlDoc)
                         res.json(urlDoc)
                         db.close()
-                    }).catch(console.log)
+                    }).catch(console.error)
             }
             else {
                 console.log('found url')
                 res.json(doc)
             }
             db.close()
-        }).catch(console.log)
+        }).catch(console.error)
     })
 }
 
@@ -65,7 +65,7 @@ const findShortened = (shortened, res) => {
                     res.redirectTo(withHttpUrl(doc.original_url))
                 }
                 db.close()
-            }).catch(console.log)
+            }).catch(console.error)
     })
 }
 
