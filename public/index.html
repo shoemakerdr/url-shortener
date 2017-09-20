@@ -31,9 +31,9 @@
         <script>
             const url = 'http://localhost:8000'
             const button = document.getElementById('button')
-            const input = document.getElementById('input').value
+            const input = document.getElementById('input')
             button.addEventListener('click', () => {
-                window.open(`${url}/${input}`, '_blank')
+                window.open(`${url}/${input.value}`, '_blank')
             })
         </script>
     </body>
