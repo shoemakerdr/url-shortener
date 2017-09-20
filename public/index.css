@@ -27,6 +27,13 @@ code {
     color: white;
 }
 
+.input {
+    margin: 1em 0 1em 0;
+    display: block;
+    font-size: 1em;
+    padding: 4px;
+}
+
 footer {
     padding-bottom: 1em;
     padding-top: 2em;
