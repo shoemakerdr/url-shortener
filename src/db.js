@@ -1,5 +1,5 @@
 const MongoClient = require('mongodb').MongoClient
-const databaseURL = require('./dburl')
+const databaseURL = process.env.MLAB_URI || require('./dburl')
 
 const randomHex = () => {
     const rand = Math.ceil(Math.random() * 1000000)
