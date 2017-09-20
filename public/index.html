@@ -22,7 +22,7 @@
             <code>{ "original_url": "google.com", "short_url": "1d5f26"}</code>
         </div>
         <div>
-            <input id='input' class='input' type='text' name='urlstring' placeholder='Type URL here...'>
+            <input id='input' class='input' type='text' name='urlstring' placeholder='Type URL to try API'>
             <button id='button' class='button'>Try this API</button>
         </div>
         <footer>
@@ -32,8 +32,14 @@
             const url = 'http://localhost:8000'
             const button = document.getElementById('button')
             const input = document.getElementById('input')
-            button.addEventListener('click', () => {
-                window.open(`${url}/${input.value}`, '_blank')
+            const tryOutHandler = () => {window.open(`${url}/${input.value}`, '_blank')}
+            button.addEventListener('click', tryOutHandler)
+            input.addEventListener('keypress', (event) => {
+                if (event.keyCode === 13) {
+                    tryOutHandler()
+                    return false;
+                }
+                return false;
             })
         </script>
     </body>
