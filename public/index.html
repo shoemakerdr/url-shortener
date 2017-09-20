@@ -6,28 +6,34 @@
         <link rel='stylesheet' href='./index.css'>
     </head>
     <body>
-        <h1>Header Parser Microservice Project</h1>
+        <h1>URL Shortener Microservice Project</h1>
         <p>
         This project is from FreeCodeCamp's Back End Certification   
-        curriculum. It takes a request object and parses the
-        headers for the user's IP address, language, and OS of
-        their browser and responds with a JSON object of that
-        info.
+        curriculum. It takes a valid url and returns a JSON object
+        with the original url and a hex string that
+        represents a shortened version of the url. When you pass
+        a valid hex (one that already exists in the database), the
+        app will redirect you to the associated original url.
         </p>
         <div>
             <h3>Example Usage</h3>
-            <code>https://thawing-coast-66449.herokuapp.com/whoami</code>
-            <button id='button' class='button'>Try this API</button>
+            <code>https://something.herokuapp.com/google.com</code>
             <h3>Example Output</h3>
-            <code>{ "ipaddress": "192.22.3.171", "language": "en-US", "software": "Macintosh; Intel Mac OS X 10_12_6"}</code>
+            <code>{ "original_url": "google.com", "short_url": "1d5f26"}</code>
+        </div>
+        <div>
+            <input id='input' class='input' type='text' name='urlstring' placeholder='Type URL here...'>
+            <button id='button' class='button'>Try this API</button>
         </div>
         <footer>
             <p class='footer-text'>Created by <a href='https://github.com/shoemakerdr' target='_blank'>Derek Shoemaker</a></p>
         </footer>
         <script>
+            const url = 'http://localhost:8000'
             const button = document.getElementById('button')
+            const input = document.getElementById('input').value
             button.addEventListener('click', () => {
-                window.open('https://thawing-coast-66449.herokuapp.com/whoami', '_blank')
+                window.open(`${url}/${input}`, '_blank')
             })
         </script>
     </body>
